@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+$darkPrimaryColor: #2a004f;
+$ligthPrimaryColor: #D1C4E9;
+$primaryColor: #350070;
+$accentColor: #009688;
+
+$primaryFont: 'Lato', sans-serif; 
+$secondaryFont: 'Anton', helvetica;
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xlg: 1200px;
+
+$rounded: 20px;
+
+html {
+  font-family: $primaryFont;
+  scroll-behavior: smooth;
+}
+
+.accent-color {
+  color: $accentColor;
+}
+
+.primary-color {
+  color: $primaryColor;
+}
+
+.navbar {
+  background-color: $darkPrimaryColor;
+  color: white;
+
+  .navbar-brand {
+    font-family: $secondaryFont;
+    font-size: 2rem;
+  }
+
+  img {
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .nav-link i {
+    margin-right: 5px;
+  }
+
+}
+
+@media (max-width: $breakpoint-md){
+  .navbar .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+.nav-link {
+  margin-left: 20px;
+  border-bottom: 2px solid transparent;
+  transition: border .3s ease-in-out;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid $accentColor;
+}
+
+
+/* landing styles */
+.landing {
+  background: linear-gradient(180deg, $primaryColor 60%, white 50%);
+
+  &-container {
+    background-color: $darkPrimaryColor;
+    border-radius: $rounded;
+  }
+
+  &-image {
+    padding: 0;
+    
+    img {
+      border-radius: $rounded;
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+}
+
+.button-primary {
+  background-color: transparent;
+  border: 2px solid $accentColor;
+  padding: 10px 20px;
+  border-radius: $rounded;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-primary:hover {
+  background-color: $accentColor;
+  color: white;
+  text-decoration: none;
+}
+
+.conditions-item {
+
+
+  .item-container {
+    background-color: $accentColor;
+    border-radius: $rounded;
+    height: 100%;
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  .item-container:hover {
+    background-color: $darkPrimaryColor;
+  }
+  
+  .item-icon {
+    padding: 20px;
+    font-size: 3em;
+    color: $accentColor;
+    background-color: white;
+  }
+
+  .item-text {
+    padding: 20px;
+    font-weight: 600;
+    color: white;
+  }
+
+}
+
+footer {
+  background-color: $darkPrimaryColor;
+  height: 100px;
+}
+
+.form {
+  background: linear-gradient(180deg, white 60%, $primaryColor 50%);
+  color:white;
+
+  &-content {
+    background-color: $darkPrimaryColor;
+    padding: 40px;
+    border-radius: $rounded;
+  }
+
+  input, textarea {
+    border-radius: $rounded;
+    padding: 20px;
+  }
+}
+
+@media (max-width: $breakpoint-md){
+  .form-content {
+    padding: 20px;
+  }
+}
+
+button:focus {
+  outline: 0;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border: none;
+  box-shadow: none;
+  outline: 0 none;
+}
