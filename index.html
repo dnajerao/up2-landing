@@ -97,20 +97,20 @@
       <div class="container form-container">
         <div class="row text-center">
           <div class="col-md-8 offset-md-2 form-content">
-            <form action="mail.php" method="POST">
-              <h3>¿Quieres mas información?</h3>
-              <p>Déjanos tus datos y te contactaremos enseguida.</p>
+            <h3>¿Quieres mas información?</h3>
+            <p>Déjanos tus datos y te contactaremos enseguida.</p>
+            <form action="mail.php" method="post" name="contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" id="name" placeholder="* Nombre">
+                <input type="text" class="form-control" name="name" id="name" placeholder="* Nombre" />
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" id="email" placeholder="* Correo electrónico">
+                <input type="email" class="form-control" name="email" id="email" placeholder="* Correo electrónico">
               </div>
               <div class="form-group">
-                <input type="tel" class="form-control" id="tel" placeholder="* Teléfono">
+                <input type="tel" class="form-control" name="tel" id="tel" placeholder="* Teléfono">
               </div>
               <div class="form-group">
-                <textarea class="form-control" id="comment" rows="3" placeholder="Puedes escribir tus dudas de una vez, trataremos de tener todas las respuestas cuando te contactemos"></textarea>
+                <textarea class="form-control" name="comment" id="comment" rows="3" placeholder="Puedes escribir tus dudas de una vez, trataremos de tener todas las respuestas cuando te contactemos"></textarea>
               </div>
               <small>* Campos requeridos</small>
               <button type="submit" class="btn-block button-primary">Enviar</button>

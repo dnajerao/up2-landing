@@ -1,9 +1,11 @@
 <?php
 
-  $user_name = $_POST['name'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+  $user_name = $_POST['name'];  
   $user_email = $_POST['email'];
   $user_tel = $_POST['tel'];
-  $user_message = $_POST['message'];
+  $user_message = $_POST['comment'];
 
   ini_set( 'display_errors', 1 );
   error_reporting( E_ALL );
@@ -14,4 +16,6 @@
             "Nombre: " . $user_name;
   $headers = "From:" . $from;
   mail($to,$subject,$message, $headers);
+}
+
 ?>
